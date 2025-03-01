@@ -12,3 +12,10 @@ body {
     --secondary-color: #4A4D57;
     --accent-color: #47bfff;
 }
+.text-gradient {
+    color: #14d8ff; 
+    background-image: linear-gradient(45deg, #14d8ff 100%, #ffffff 39%, #2c906f 43%, #5A1846 9%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+   }

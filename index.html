@@ -15,10 +15,12 @@
 
 <body class="min-h-screen flex flex-col items-center">
     <h1 style="font-family: 'Shadows Into Light', cursive;"
-        class="text-6xl underline underline-offset-[3px] text-cyan-300 mt-24 mb-5">Todo App</h1>
-    <div>
+        class="text-6xl font-semibold mt-24 mb-5 text-gradient ">Todo App</h1>
+    <div class="w-auto border-2 p-5 m-4 rounded-lg shadow-lg">
         <form>
-            <input id="todoInput" type="text" placeholder="none" autocomplete="off">
+            <input id="todoInput" type="text"
+            class="box-border w-full px-4 p-2 bg-transparent border-2 rounded-full border-gray-200 focus:outline-none focus:border-blue-500"
+            placeholder="write anything and hit enter to add" autocomplete="off">
             <button id="addButoon">Add</button>
         </form>
         <ul id="todoList" class="">
