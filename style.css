@@ -14,6 +14,27 @@ body {
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
 }
+
+.custom-checkbox {
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked ~ label .custom-checkbox {
+    background-color: #3b82f6;
+}
+
+/* Optional: Add a transition effect */
+.peer-checked ~ label .border {
+    transition: background-color 0.2s ease-in-out;
+}
+#todoList input[type="checkbox"]:checked + label svg {
+    visibility: visible;
+}
+#todoList input[type="checkbox"]:checked ~ .todoText {
+    text-decoration: line-through;
+    color: #b2a8a8;
+}
+
 /* .todoText {
     padding: 12px 0px;
     font-size: 1.1rem;

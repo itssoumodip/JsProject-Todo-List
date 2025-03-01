@@ -20,27 +20,30 @@
     <div class="md:w-2/5 w-5/6 p-5 m-2 rounded-lg shadow-lg">
         <form class="relative mb-4">
             <input id="todoInput" type="text"
-            class="box-border w-full px-4 p-2 bg-transparent border-2 rounded-full border-gray-600 caret-blue-600 focus:outline-none focus:border-blue-500"
+            class="box-border w-full px-4 pr-24 p-2 bg-transparent border-2 rounded-full border-gray-600 caret-blue-600 focus:outline-none focus:border-blue-500"
             placeholder="write anything" autocomplete="off">
-            <button class="absolute top-0 right-0 h-[100%] rounded-full px-6 bg-[#2bd2f4b7]" id="addButoon">Add</button>
+            <button class="absolute top-1/2 -translate-y-1/2 right-2 rounded-full px-6 py-1 text-black font-semibold
+            bg-blue-500" id="addButoon">Add</button>
         </form>
         <ul id="todoList" class="gap-4 flex flex-col">
-            <li class="flex todoText h-auto items-center justify-between gap-2 w-full bg-gray-600/30
+            <li class="flex h-auto items-center justify-between gap-2 w-full bg-gray-600/30
             p-3 rounded-md">
                 <div class="flex items-center gap-2 min-w-0 flex-1">
-                    <input type="checkbox" class="hidden " id="todo-1">
-                    <label for="todo-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                            fill="#e3e3e3">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
+                    <input type="checkbox" class="hidden" id="todo-1">
+                    <label for="todo-1" class="cursor-pointer">
+                        <div class="custom-checkbox border rounded-full p-1 border-blue-500">
+                            <svg class="fill-black invisible" xmlns="http://www.w3.org/2000/svg" height="13px" viewBox="0 -960 960 960" width="13px"
+                                fill="#e3e3e3">
+                                <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                            </svg>
+                        </div>
                     </label>
-                    <label for="todo-1" class="break-words overflow-hidden flex-1">
+                    <label for="todo-1" class="todoText break-words overflow-hidden flex-1">
                         Your todo   
                     </label>
                 </div>
-                <button class="flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                <button class="flex-shrink-0 cursor-pointer">
+                    <svg class="hover:fill-red-600" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#e3e3e3">
                         <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
                     </svg>
