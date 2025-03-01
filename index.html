@@ -11,20 +11,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    
 </head>
 
 <body class="min-h-screen flex flex-col items-center">
     <h1 style="font-family:'Shadows Into Light', cursive;"
         class="text-6xl font-semibold mt-24 mb-5 text-gradient ">Todo App</h1>
-    <div class="md:w-2/5 w-auto border-2 p-5 m-4 rounded-lg shadow-lg">
-        <form class="relative">
+    <div class="md:w-2/5 w-5/6 border-2 p-5 m-2 rounded-lg shadow-lg">
+        <form class="relative mb-4">
             <input id="todoInput" type="text"
             class="box-border w-full px-4 p-2 bg-transparent border-2 rounded-full border-gray-600 caret-blue-600 focus:outline-none focus:border-blue-500"
             placeholder="write anything" autocomplete="off">
             <button class="absolute top-0 right-0 h-[100%] rounded-full px-6 bg-[#2bd2f4b7]" id="addButoon">Add</button>
         </form>
-        <ul id="todoList" class="">
-            <li class="flex">
+        <ul id="todoList" class="gap-4 flex flex-col">
+            <li class="flex todoText h-auto">
                 <input type="checkbox" id="todo-1">
                 <label for="todo-1">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -32,8 +33,8 @@
                         <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
                     </svg>
                 </label>
-                <label for="todo-1">
-                    Webdev project with Html, Css, Js
+                <label for="todo-1" class="w-9/12 h-auto border">
+                   fdsfsafsfsffffff
                 </label>
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -43,7 +44,7 @@
                     </svg>
                 </button>
             </li>
-            <li class="flex">
+            <li class="flex todoText">
                 <input type="checkbox" id="todo-2">
                 <label for="todo-2">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -51,8 +52,8 @@
                         <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
                     </svg>
                 </label>
-                <label for="todo-1">
-                    Webdev project with Html, Css, Js
+                <label for="todo-2">
+                    Webdev ss, Js
                 </label>
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
