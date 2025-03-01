@@ -17,11 +17,11 @@
     <h1 style="font-family: 'Shadows Into Light', cursive;"
         class="text-6xl font-semibold mt-24 mb-5 text-gradient ">Todo App</h1>
     <div class="w-auto border-2 p-5 m-4 rounded-lg shadow-lg">
-        <form>
+        <form class="relative">
             <input id="todoInput" type="text"
-            class="box-border w-full px-4 p-2 bg-transparent border-2 rounded-full border-gray-200 focus:outline-none focus:border-blue-500"
-            placeholder="write anything and hit enter to add" autocomplete="off">
-            <button id="addButoon">Add</button>
+            class="box-border w-full px-4 p-2 bg-transparent border-2 rounded-full border-gray-600 focus:outline-none focus:border-blue-500"
+            placeholder="write anything" autocomplete="off">
+            <button class="absolute top-0 right-0 h-[100%] rounded-full px-6 bg-[#2bd2f4b7]" id="addButoon">Add</button>
         </form>
         <ul id="todoList" class="">
             <li class="flex">
