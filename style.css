@@ -23,7 +23,6 @@ input[type="checkbox"]:checked ~ label .custom-checkbox {
     background-color: #3b82f6;
 }
 
-/* Optional: Add a transition effect */
 .peer-checked ~ label .border {
     transition: background-color 0.2s ease-in-out;
 }
