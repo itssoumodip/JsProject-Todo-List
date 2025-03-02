@@ -26,14 +26,37 @@ function createTodoElement(todoText, todoId) {
 }
 
 
-document.getElementById('addButoon').addEventListener('click', function(e) {
+// document.getElementById('addButoon').addEventListener('click', function(e) {
+//     e.preventDefault();
+//     const todoInput = document.getElementById('todoInput');
+//     const todoText = todoInput.value.trim();
+//     if (todoText) {
+//         // const todoId = Date.now(); 
+//         // const todoHTML = createTodoElement(todoText, todoId);
+//         // document.getElementById('todoList').insertAdjacentHTML('beforeend', todoHTML);
+//         // todoInput.value = '';
+//     }
+// });
+
+const todoForm = document.querySelector('form');
+const todoInput = document.getElementById('todoInput');
+const todoList = document.getElementById('todoList');
+
+let allTodos = [];
+
+todoForm.addEventListener('submit', function(e){
     e.preventDefault();
-    const todoInput = document.getElementById('todoInput');
-    const todoText = todoInput.value.trim();
-    if (todoText) {
-        const todoId = Date.now(); 
+    addTodo();
+})
+
+function addTodo() {
+     const todoText = todoInput.value;
+     if(todoText.length>0) {
+        allTodos.push(todoText);
+        // todoText="";
+        const todoId = Date.now();
         const todoHTML = createTodoElement(todoText, todoId);
-        document.getElementById('todoList').insertAdjacentHTML('beforeend', todoHTML);
+        todoList.insertAdjacentHTML('beforeend', todoHTML);
         todoInput.value = '';
-    }
-});
+     }
+}

@@ -31,7 +31,7 @@ input[type="checkbox"]:checked ~ label .custom-checkbox {
 }
 #todoList input[type="checkbox"]:checked ~ .todoText {
     text-decoration: line-through;
-    color: #b2a8a8;
+    color: #867d7db6;
 }
 
 /* .todoText {
