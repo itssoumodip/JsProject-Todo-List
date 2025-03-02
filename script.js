@@ -25,19 +25,6 @@ function createTodoElement(todoText, todoId) {
             </li>`;
 }
 
-
-// document.getElementById('addButoon').addEventListener('click', function(e) {
-//     e.preventDefault();
-//     const todoInput = document.getElementById('todoInput');
-//     const todoText = todoInput.value.trim();
-//     if (todoText) {
-//         // const todoId = Date.now(); 
-//         // const todoHTML = createTodoElement(todoText, todoId);
-//         // document.getElementById('todoList').insertAdjacentHTML('beforeend', todoHTML);
-//         // todoInput.value = '';
-//     }
-// });
-
 const todoForm = document.querySelector('form');
 const todoInput = document.getElementById('todoInput');
 const todoList = document.getElementById('todoList');
@@ -53,10 +40,21 @@ function addTodo() {
      const todoText = todoInput.value;
      if(todoText.length>0) {
         allTodos.push(todoText);
-        // todoText="";
-        const todoId = Date.now();
-        const todoHTML = createTodoElement(todoText, todoId);
-        todoList.insertAdjacentHTML('beforeend', todoHTML);
+        updateTodo();
         todoInput.value = '';
+        
      }
+};
+
+function updateTodo() { 
+    todoList.innerHTML = '';
+    allTodos.forEach((todoText, index)=> {
+        const todoHTML = createTodoElement(todoText, index);
+        console.log(allTodos[index])
+        todoList.insertAdjacentHTML('beforeend', todoHTML);
+    })
+}
+
+function saveTodos() {
+
 }
