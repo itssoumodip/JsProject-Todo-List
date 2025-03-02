@@ -9,7 +9,7 @@ body {
 }
 .text-gradient {
     color: #14d8ff; 
-    background-image: linear-gradient(45deg, #14d8ff 100%, #ffffff 39%, #2c906f 43%, #5A1846 9%); 
+    background-image: linear-gradient(45deg, #3b82f6 100%, #ffffff 39%, #2c906f 43%, #5A1846 9%); 
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
@@ -19,8 +19,22 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
+.custom-checkbox svg {
+    transition: all 0.2s ease;
+}
+
 input[type="checkbox"]:checked ~ label .custom-checkbox {
     background-color: #3b82f6;
+}
+
+input[type="checkbox"]:checked + label .custom-checkbox {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+input[type="checkbox"]:checked + label .custom-checkbox svg {
+    visibility: visible !important;
+    fill: white;
 }
 
 .peer-checked ~ label .border {
@@ -34,10 +48,37 @@ input[type="checkbox"]:checked ~ label .custom-checkbox {
     color: #867d7db6;
 }
 
-/* .todoText {
-    padding: 12px 0px;
-    font-size: 1.1rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgba(62, 62, 62, 0.53);
-    border: 1px solid #0036e8;
-} */
+.todoText {
+    transition: all 0.2s ease;
+}
+
+.deleteBtn svg {
+    transition: all 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#todoList li {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #5a5a5a;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0965f7;
+}
